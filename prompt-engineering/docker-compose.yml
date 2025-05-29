@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  jupyter:
+    image: jupyter/minimal-notebook
+    container_name: prompt-training
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./.env:/home/jovyan/.env
+    environment:
+      - DOTENV=/home/jovyan/.env
+    command: start-notebook.sh --NotebookApp.token=''
