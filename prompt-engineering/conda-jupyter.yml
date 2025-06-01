@@ -1,0 +1,11 @@
+name: openai-lab-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - jupyterlab
+  - pip
+  - pip:
+      - openai
+      - python-dotenv
