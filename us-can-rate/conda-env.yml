@@ -1,0 +1,24 @@
+name: can_us_rate
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - jupyterlab
+  - pip
+  - openai
+  - python-dotenv
+  - yfinance
+  - matplotlib
+  - pandas
+  - numpy
+  - scikit-learn
+  - prophet
+  - tiktoken
+  - azure-ai-ml
+  - seaborn
+  - textblob
+  - feedparser
+  - pip:
+      - transformers  # Only available via pip
+      - newsapi-python

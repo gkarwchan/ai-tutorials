@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jupyter-openai:latest
+    container_name: prompt-training
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/work
+      - ./.env:/home/jovyan/.env
+    environment:
+      - DOTENV=/home/jovyan/.env
+      - JUPYTER_ENABLE_LAB=yes
+    command: start-notebook.sh --NotebookApp.token=''
