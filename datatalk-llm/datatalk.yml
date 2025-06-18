@@ -5,9 +5,12 @@ channels:
 dependencies:
   - python=3.12
   - jupyterlab
+  - ipywidgets
   - pip
   - pip:
       - openai
       - python-dotenv
       - tqdm
       - elasticsearch
+      - jupyterlab-widgets
+
