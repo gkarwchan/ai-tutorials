@@ -1,0 +1,13 @@
+name: azure
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.13.5
+  - pip
+  - pip:
+      - azure-identity
+      - python-dotenv
+      - azure-ai-projects
+      - azure-ai-ml
+      - semantic-kernel[azure]

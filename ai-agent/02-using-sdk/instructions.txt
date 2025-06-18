@@ -1,0 +1,5 @@
+ask the question:
+What's the category with the highest cost?
+
+you could ask :
+Create a pie chart showing cost by category
