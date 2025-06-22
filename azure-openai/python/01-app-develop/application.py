@@ -23,6 +23,9 @@ async def main():
             api_version="2024-02-15-preview",
         )
         #Initialize messages array
+        print("\nAdding grounding context from grounding.txt")
+        grounding_text = open(file="grounding.txt", encoding="utf8").read().strip()
+        messages_array = [{"role": "user", "content": grounding_text}]
 
         while True:
             # Pause the app to allow the user to enter the system prompt
@@ -37,6 +40,8 @@ async def main():
                 break
 
             # Format and send the request to the model
+            messages_array.append({"role": "system", "content": system_text})
+            messages_array.append({"role": "user", "content": user_text})
 
             await call_openai_model(system_message = system_text, 
                                     user_message = user_text, 
