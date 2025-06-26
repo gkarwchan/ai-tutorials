@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "azure-openai", "azure-openai", "{1AF3B296-4210-A5BE-CB98-76E3F2FFF35D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dotnet", "dotnet", "{48EA3CB1-31D0-30FE-CFE0-EC773288148B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "azure-openai\dotnet\01-app-develop\CSharp.csproj", "{FFDAE0B0-3E94-F88E-77F2-922183E34F18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFDAE0B0-3E94-F88E-77F2-922183E34F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFDAE0B0-3E94-F88E-77F2-922183E34F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFDAE0B0-3E94-F88E-77F2-922183E34F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFDAE0B0-3E94-F88E-77F2-922183E34F18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{48EA3CB1-31D0-30FE-CFE0-EC773288148B} = {1AF3B296-4210-A5BE-CB98-76E3F2FFF35D}
+		{FFDAE0B0-3E94-F88E-77F2-922183E34F18} = {48EA3CB1-31D0-30FE-CFE0-EC773288148B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7665D7DC-BA13-4A09-92A9-1DEEE6340072}
+	EndGlobalSection
+EndGlobal
