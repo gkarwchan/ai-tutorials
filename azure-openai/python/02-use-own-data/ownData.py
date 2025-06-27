@@ -18,8 +18,32 @@ client = openai.AzureOpenAI(
 )
 
 # Configure your data source
-
-
+text = input("Enter your question:\n")
+completion = client.chat.completions.create(
+    model=deployment,
+    messages=[
+        {
+            "role": "user",
+            "content": text
+        }
+    ],
+    extra_body={
+        "data_sources":[
+            {
+                "type": "azure_search",
+                "parameters": {
+                    "endpoint": os.environ.get("AZURE_SEARCH_ENDPOINT"),
+                    "key": os.environ.get("AZURE_SEARCH_KEY"),
+                    "index_name": os.environ.get("AZURE_SEARCH_INDEX"),
+                    "authentication": {
+                        "type": "api_key",
+                        "key": os.environ.get("AZURE_SEARCH_KEY")
+                    }
+                }
+            }
+        ],
+    }
+)
 print(completion.choices[0].message.content)
 
 if showCitations:
